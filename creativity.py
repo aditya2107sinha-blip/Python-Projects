@@ -4,10 +4,10 @@ balance = 10000000
 
 def ATM_inside(name):
     for attempts in range(3):
-            pincode = input("please enter your Pincode")
-            if pincode.isdigit() and pincode == PIN:
-                break
-            print(F"YOU HAVE LEFT {2 - attempts} ATTEMPTS ONLY")
+        pincode = input("please enter your Pincode")
+        if pincode.isdigit() and int(pincode) == PIN:
+            break
+        print(F"YOU HAVE LEFT {2 - attempts} ATTEMPTS ONLY")
     else:
         return
     while(True):
