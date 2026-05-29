@@ -56,8 +56,8 @@ def Search():
                 check = ",".join(check)
                 break
 
-            else:
-                print("No student found!")
+        else:
+            print("No student found!")
     print(check)
 
 def delete():

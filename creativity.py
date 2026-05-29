@@ -4,7 +4,8 @@ balance = 10000000
 
 def ATM_inside(name):
     for attempts in range(3):
-        pincode = input("please enter your Pincode")
+        global balance
+        pincode = input("please enter your Pincode: ")
         if pincode.isdigit() and int(pincode) == PIN:
             break
         print(F"YOU HAVE LEFT {2 - attempts} ATTEMPTS ONLY")
@@ -34,7 +35,7 @@ def ATM_inside(name):
                        continue
                     else:
                         break
-                print(f"{name} credited {amount} on {datetime.date.today()}")
+                print(f"{name} credited {amount} on {datetime.date.today()} and now your total balance is {balance}")
 
         elif choice == 3:
             withdarwing_amount = int(input("enter the amount you want to withdraw"))
@@ -43,9 +44,8 @@ def ATM_inside(name):
 
             else:
                 balance -= withdarwing_amount
-                print(balance - withdarwing_amount)
 
-            print(f"{name} withdrew {withdarwing_amount} on {datetime.date.today()}")
+            print(f"{name} withdrew {withdarwing_amount} on {datetime.date.today()} and now your total balance is {balance}")
             print("Do you want to do anything again?")
             option = int(input("enter your option: "))
             if option == 1:
